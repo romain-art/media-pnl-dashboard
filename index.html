@@ -2,7 +2,6 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--font-sans);color:var(--color-text-primary);font-size:14px;line-height:1.5}
 input,button,select{font-family:inherit}
-
 .gate{display:flex;align-items:center;justify-content:center;min-height:500px;padding:2rem}
 .gate-card{width:100%;max-width:340px;background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:2rem 2rem 1.75rem}
 .gate-logo{width:44px;height:44px;border-radius:10px;background:#185FA5;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
@@ -10,7 +9,6 @@ input,button,select{font-family:inherit}
 .gate-title{font-size:17px;font-weight:500;margin-bottom:4px}
 .gate-sub{font-size:12px;color:var(--color-text-secondary);margin-bottom:1.5rem}
 .gate-err{font-size:12px;color:#a32d2d;margin-top:6px;display:none}
-
 .app{display:none}
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:.5px solid var(--color-border-tertiary);flex-wrap:wrap;gap:10px}
 .topbar-left{display:flex;align-items:center;gap:10px}
@@ -25,9 +23,7 @@ input,button,select{font-family:inherit}
 .pill.partial::after{content:'·';margin-left:3px;opacity:.6}
 .btn-sm{font-size:12px;padding:5px 12px;border-radius:var(--border-radius-md);border:.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);cursor:pointer}
 .btn-sm:hover{background:var(--color-background-secondary)}
-
 .content{padding:1.25rem}
-
 .kpi-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:1rem}
 .kpi{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:1rem 1.125rem}
 .kpi-label{font-size:11px;color:var(--color-text-secondary);margin-bottom:6px;letter-spacing:.03em}
@@ -37,20 +33,16 @@ input,button,select{font-family:inherit}
 .arrow.up{background:#e1f5ee;color:#0f6e56}
 .arrow.dn{background:#fcebeb;color:#a32d2d}
 .arrow.nt{background:var(--color-background-primary);color:var(--color-text-secondary);border:.5px solid var(--color-border-tertiary)}
-
 .card{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.125rem;margin-bottom:10px}
 .card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px}
 .card-title{font-size:13px;font-weight:500}
 .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--color-text-secondary)}
 .ld{display:flex;align-items:center;gap:5px}
 .lb{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:10px}
-
-.nav-tabs{display:flex;gap:2px;margin-bottom:1rem;border-bottom:.5px solid var(--color-border-tertiary);padding-bottom:0}
+.nav-tabs{display:flex;gap:2px;border-bottom:.5px solid var(--color-border-tertiary);margin-bottom:1rem}
 .ntab{font-size:12px;padding:6px 14px;cursor:pointer;background:transparent;border:none;color:var(--color-text-secondary);border-bottom:2px solid transparent;margin-bottom:-1px}
 .ntab.active{color:var(--color-text-primary);border-bottom-color:var(--color-text-primary);font-weight:500}
-
 .synth-table{width:100%;font-size:12px;border-collapse:collapse}
 .synth-table th{text-align:right;padding:6px 8px;font-weight:500;color:var(--color-text-secondary);border-bottom:.5px solid var(--color-border-tertiary);font-size:11px}
 .synth-table th:first-child{text-align:left}
@@ -58,10 +50,8 @@ input,button,select{font-family:inherit}
 .synth-table td:first-child{text-align:left;font-weight:500}
 .synth-table tr.active-row td{background:var(--color-background-secondary)}
 .synth-table tr:last-child td{border-bottom:none}
-
 .section{display:none}
 .section.show{display:block}
-
 .partial-tag{font-size:11px;color:#854f0b;background:#faeeda;padding:2px 8px;border-radius:4px}
 </style>
 
@@ -71,10 +61,10 @@ input,button,select{font-family:inherit}
       <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
     </div>
     <div class="gate-title">P&L Dashboard</div>
-    <div class="gate-sub">Accès réservé · Données financières confidentielles</div>
-    <input type="password" id="pwd" placeholder="Mot de passe" style="width:100%" onkeydown="if(event.key==='Enter')login()">
-    <div class="gate-err" id="err">Mot de passe incorrect, réessaie.</div>
-    <button style="width:100%;margin-top:10px" onclick="login()">Accéder →</button>
+    <div class="gate-sub">Restricted access · Confidential financial data</div>
+    <input type="password" id="pwd" placeholder="Password" style="width:100%" onkeydown="if(event.key==='Enter')login()">
+    <div class="gate-err" id="err">Incorrect password, please try again.</div>
+    <button style="width:100%;margin-top:10px" onclick="login()">Sign in →</button>
   </div>
 </div>
 
@@ -86,30 +76,30 @@ input,button,select{font-family:inherit}
       </div>
       <div>
         <div class="topbar-title">P&L Dashboard</div>
-        <div class="topbar-sub">Marketing d'affiliation · 2022–2026</div>
+        <div class="topbar-sub">Affiliate marketing · 2022–2026</div>
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-      <div class="year-pills" id="yearPills">
+      <div class="year-pills">
         <button class="pill" onclick="setYear(2022,this)">2022</button>
         <button class="pill" onclick="setYear(2023,this)">2023</button>
         <button class="pill" onclick="setYear(2024,this)">2024</button>
         <button class="pill active" onclick="setYear(2025,this)">2025</button>
         <button class="pill partial" onclick="setYear(2026,this)">2026</button>
       </div>
-      <button class="btn-sm" onclick="logout()">Déconnexion</button>
+      <button class="btn-sm" onclick="logout()">Sign out</button>
     </div>
   </div>
 
   <div class="content">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:1rem">
       <div class="nav-tabs">
-        <button class="ntab active" onclick="showSection('overview',this)">Vue d'ensemble</button>
-        <button class="ntab" onclick="showSection('monthly',this)">Mensuel</button>
-        <button class="ntab" onclick="showSection('compare',this)">Multi-années</button>
-        <button class="ntab" onclick="showSection('synth',this)">Synthèse</button>
+        <button class="ntab active" onclick="showSection('overview',this)">Overview</button>
+        <button class="ntab" onclick="showSection('monthly',this)">Monthly</button>
+        <button class="ntab" onclick="showSection('compare',this)">Multi-year</button>
+        <button class="ntab" onclick="showSection('synth',this)">Summary</button>
       </div>
-      <span id="partialTag" class="partial-tag" style="display:none;margin-bottom:1px">2 mois disponibles</span>
+      <span id="partialTag" class="partial-tag" style="display:none">2 months available</span>
     </div>
 
     <div class="kpi-row" id="kpis"></div>
@@ -119,7 +109,7 @@ input,button,select{font-family:inherit}
         <div class="card-head">
           <span class="card-title">Revenue & net profit</span>
           <div class="legend">
-            <span class="ld"><span class="lb" style="background:#378ADD"></span>CA</span>
+            <span class="ld"><span class="lb" style="background:#378ADD"></span>Revenue</span>
             <span class="ld"><span class="lb" style="background:#1D9E75"></span>Net profit</span>
           </div>
         </div>
@@ -128,15 +118,13 @@ input,button,select{font-family:inherit}
       <div class="grid2">
         <div class="card">
           <div class="card-head">
-            <span class="card-title">Marge nette (%)</span>
-            <span class="legend"><span class="ld"><span class="lb" style="background:#534AB7"></span>Profitabilité</span></span>
+            <span class="card-title">Net margin (%)</span>
+            <span class="legend"><span class="ld"><span class="lb" style="background:#534AB7"></span>Profitability</span></span>
           </div>
           <div style="position:relative;height:180px"><canvas id="c2"></canvas></div>
         </div>
         <div class="card">
-          <div class="card-head">
-            <span class="card-title">Répartition des charges</span>
-          </div>
+          <div class="card-head"><span class="card-title">Cost breakdown</span></div>
           <div style="display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center">
             <div style="position:relative;height:160px;width:160px"><canvas id="c3"></canvas></div>
             <div id="pieL" style="font-size:11px"></div>
@@ -148,7 +136,7 @@ input,button,select{font-family:inherit}
     <div class="section" id="s-monthly">
       <div class="card">
         <div class="card-head">
-          <span class="card-title">Détail mensuel — CA</span>
+          <span class="card-title">Monthly revenue breakdown</span>
           <div class="legend">
             <span class="ld"><span class="lb" style="background:#378ADD"></span>Revenue fee</span>
             <span class="ld"><span class="lb" style="background:#85B7EB"></span>Platform fee</span>
@@ -158,13 +146,13 @@ input,button,select{font-family:inherit}
       </div>
       <div class="card">
         <div class="card-head">
-          <span class="card-title">Coûts détaillés</span>
+          <span class="card-title">Monthly cost breakdown</span>
           <div class="legend">
-            <span class="ld"><span class="lb" style="background:#E24B4A"></span>Salaires</span>
+            <span class="ld"><span class="lb" style="background:#E24B4A"></span>Wages</span>
             <span class="ld"><span class="lb" style="background:#EF9F27"></span>Bonus</span>
             <span class="ld"><span class="lb" style="background:#378ADD"></span>Software</span>
             <span class="ld"><span class="lb" style="background:#1D9E75"></span>Linkbuilding</span>
-            <span class="ld"><span class="lb" style="background:#888780"></span>Autres</span>
+            <span class="ld"><span class="lb" style="background:#888780"></span>Other</span>
           </div>
         </div>
         <div style="position:relative;height:220px"><canvas id="c5"></canvas></div>
@@ -174,22 +162,18 @@ input,button,select{font-family:inherit}
     <div class="section" id="s-compare">
       <div class="card">
         <div class="card-head">
-          <span class="card-title">CA annuel 2022–2026</span>
-          <div class="legend"><span class="ld"><span class="lb" style="background:#378ADD"></span>Chiffre d'affaires</span></div>
+          <span class="card-title">Annual revenue 2022–2026</span>
+          <div class="legend"><span class="ld"><span class="lb" style="background:#378ADD"></span>Total revenue</span></div>
         </div>
         <div style="position:relative;height:220px"><canvas id="c6"></canvas></div>
       </div>
       <div class="grid2">
         <div class="card">
-          <div class="card-head">
-            <span class="card-title">Net profit comparé</span>
-          </div>
+          <div class="card-head"><span class="card-title">Net profit by year</span></div>
           <div style="position:relative;height:180px"><canvas id="c7"></canvas></div>
         </div>
         <div class="card">
-          <div class="card-head">
-            <span class="card-title">Marge moyenne par année</span>
-          </div>
+          <div class="card-head"><span class="card-title">Average margin by year</span></div>
           <div style="position:relative;height:180px"><canvas id="c8"></canvas></div>
         </div>
       </div>
@@ -197,11 +181,11 @@ input,button,select{font-family:inherit}
 
     <div class="section" id="s-synth">
       <div class="card">
-        <div class="card-head"><span class="card-title">Synthèse 2022–2026</span></div>
+        <div class="card-head"><span class="card-title">Annual summary 2022–2026</span></div>
         <div style="overflow-x:auto">
           <table class="synth-table" id="synthT"></table>
         </div>
-        <div style="font-size:11px;color:var(--color-text-secondary);margin-top:10px">* 2026 : données partielles (janvier–février)</div>
+        <div style="font-size:11px;color:var(--color-text-secondary);margin-top:10px">* 2026: partial data (January–February only)</div>
       </div>
     </div>
   </div>
@@ -210,7 +194,7 @@ input,button,select{font-family:inherit}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const PWD='Media2025!';
-const M=['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+const M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 const D={
   2022:{rev:[115262,107435,122855,82814,139324,150735,215034,267081,246773,244011,304400,266219],np:[21110,9526,17949,-26223,32911,46731,114724,186911,177814,166036,220659,183833],mgn:[18.31,8.87,14.61,-31.66,23.62,31.00,53.35,69.98,72.06,68.04,72.49,69.05],tr:2261943,tnp:1151981,wages:566112,bonus:185888,soft:74000,link:213368,partial:false,pfee:[65368,63806,74231,44985,99630,115859,184189,222686,197855,195277,252562,218233],rfee:[17651,19693,24794,18037,14524,15956,13212,23142,25598,25040,20095,12785]},
@@ -221,11 +205,9 @@ const D={
 };
 
 let curY=2025,charts={};
-
 const fmt=v=>{const a=Math.abs(v),s=v<0?'-':'';return a>=1e6?s+(a/1e6).toFixed(2)+'M€':a>=1e3?s+(a/1e3).toFixed(0)+'k€':s+Math.round(a)+'€'};
 const pct=(a,b)=>b?((a-b)/Math.abs(b)*100).toFixed(1):null;
 const avg=arr=>arr.reduce((a,b)=>a+b,0)/arr.length;
-const chOpts=(y,cb)=>({responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:cb||null}}},scales:{y:{ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}},x:{ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}}}});
 
 function login(){
   if(document.getElementById('pwd').value===PWD){
@@ -244,30 +226,26 @@ function logout(){
   document.getElementById('pwd').value='';
   document.getElementById('err').style.display='none';
 }
-
 function showSection(id,el){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('show'));
   document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
   document.getElementById('s-'+id).classList.add('show');
   el.classList.add('active');
 }
-
 function setYear(y,el){
   curY=y;
   document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
   el.classList.add('active');
-  const d=D[y],prev=D[y-1];
+  const d=D[y],prev=D[y-1],n=d.rev.length,lbl=M.slice(0,n);
   document.getElementById('partialTag').style.display=d.partial?'inline-block':'none';
-  const n=d.rev.length;
-  const lbl=M.slice(0,n);
   const rg=prev?pct(d.tr,prev.tr):null,ng=prev?pct(d.tnp,prev.tnp):null;
   const costs=d.tr-d.tnp,m=avg(d.mgn);
 
   document.getElementById('kpis').innerHTML=[
-    {l:'Chiffre d\'affaires',v:fmt(d.tr),g:rg,ref:prev?'vs '+(y-1):null},
+    {l:'Total revenue',v:fmt(d.tr),g:rg,ref:prev?'vs '+(y-1):null},
     {l:'Net profit',v:fmt(d.tnp),g:ng,ref:prev?'vs '+(y-1):null},
-    {l:'Marge nette moy.',v:m.toFixed(1)+'%',g:null,ref:d.partial?n+' mois':'annuelle'},
-    {l:'Charges totales',v:fmt(costs),g:null,ref:((costs/d.tr)*100).toFixed(1)+'% du CA'}
+    {l:'Avg net margin',v:m.toFixed(1)+'%',g:null,ref:d.partial?n+' months':'full year'},
+    {l:'Total costs',v:fmt(costs),g:null,ref:((costs/d.tr)*100).toFixed(1)+'% of revenue'}
   ].map(k=>{
     const dir=k.g===null?'nt':+k.g>=0?'up':'dn';
     const sym=dir==='nt'?'—':dir==='up'?'↑':'↓';
@@ -280,22 +258,17 @@ function setYear(y,el){
   upd('c2',lbl,[d.mgn]);
   upd('c4',lbl,[d.rfee.slice(0,n),d.pfee.slice(0,n)]);
 
-  const wm=d.wages,bo=d.bonus,so=d.soft,li=d.link;
-  const oth=costs-wm-bo-so-li;
-  const costsMonthly=d.rev.slice(0,n).map((_,i)=>{
-    const tot=d.rev[i]-d.np[i];
-    return tot;
-  });
-  const wFrac=wm/costs,bFrac=bo/costs,sFrac=so/costs,lFrac=li/costs,oFrac=Math.max(0,oth)/costs;
+  const wm=d.wages,bo=d.bonus,so=d.soft,li=d.link,oth=Math.max(0,costs-wm-bo-so-li);
+  const wF=wm/costs,bF=bo/costs,sF=so/costs,lF=li/costs,oF=oth/costs;
   upd('c5',lbl,[
-    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*wFrac)),
-    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*bFrac)),
-    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*sFrac)),
-    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*lFrac)),
-    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*oFrac))
+    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*wF)),
+    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*bF)),
+    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*sF)),
+    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*lF)),
+    d.rev.slice(0,n).map((_,i)=>Math.round((d.rev[i]-d.np[i])*oF))
   ]);
 
-  const pieD=[{l:'Salaires',v:wm,c:'#E24B4A'},{l:'Bonus',v:bo,c:'#EF9F27'},{l:'Software',v:so,c:'#378ADD'},{l:'Linkbuilding',v:li,c:'#1D9E75'},{l:'Autres',v:Math.max(0,oth),c:'#B4B2A9'}];
+  const pieD=[{l:'Wages & salaries',v:wm,c:'#E24B4A'},{l:'Bonus',v:bo,c:'#EF9F27'},{l:'Software',v:so,c:'#378ADD'},{l:'Linkbuilding',v:li,c:'#1D9E75'},{l:'Other',v:oth,c:'#B4B2A9'}];
   const pc=charts['c3'];
   pc.data.datasets[0].data=pieD.map(p=>p.v);
   pc.data.datasets[0].backgroundColor=pieD.map(p=>p.c);
@@ -308,14 +281,13 @@ function setYear(y,el){
 function buildSynth(cur){
   const yrs=[2022,2023,2024,2025,2026];
   document.getElementById('synthT').innerHTML=`<thead><tr>
-    <th style="text-align:left">Année</th>
-    <th>CA total</th><th>Net profit</th><th>Marge moy.</th><th>Croiss. CA</th><th>Croiss. NP</th>
+    <th style="text-align:left">Year</th>
+    <th>Total revenue</th><th>Net profit</th><th>Avg margin</th><th>Rev. growth</th><th>NP growth</th>
   </tr></thead><tbody>`+yrs.map(y=>{
     const d=D[y],p=D[y-1];
     const rg=p?pct(d.tr,p.tr):null,ng=p?pct(d.tnp,p.tnp):null;
     const gc=v=>v===null?'var(--color-text-secondary)':+v>=0?'#0f6e56':'#a32d2d';
-    const hi=y===cur?'active-row':'';
-    return `<tr class="${hi}">
+    return `<tr class="${y===cur?'active-row':''}">
       <td>${y}${d.partial?' *':''}</td>
       <td>${fmt(d.tr)}</td><td>${fmt(d.tnp)}</td><td>${avg(d.mgn).toFixed(1)}%</td>
       <td style="color:${gc(rg)}">${rg===null?'—':(+rg>=0?'+':'')+rg+'%'}</td>
@@ -324,34 +296,29 @@ function buildSynth(cur){
   }).join('')+'</tbody>';
 }
 
-function mk(id,type,labels,datasets,extraOpts){
-  const opts=Object.assign({},chOpts(),extraOpts||{});
-  charts[id]=new Chart(document.getElementById(id),{type,data:{labels,datasets},options:opts});
-}
-
 function buildCharts(){
   const d=D[2025];
-  mk('c1','bar',M,[
-    {type:'bar',data:d.rev,backgroundColor:'rgba(55,138,221,0.15)',borderColor:'#378ADD',borderWidth:1,label:'CA',yAxisID:'y'},
-    {type:'line',data:d.np,borderColor:'#1D9E75',backgroundColor:'rgba(29,158,117,0.07)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#1D9E75',tension:.4,fill:true,label:'NP',yAxisID:'y'}
-  ],{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}},scales:{y:{ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}},x:{ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}}}});
+  charts['c1']=new Chart(document.getElementById('c1'),{data:{labels:M,datasets:[
+    {type:'bar',data:d.rev,backgroundColor:'rgba(55,138,221,0.15)',borderColor:'#378ADD',borderWidth:1,label:'Revenue',yAxisID:'y'},
+    {type:'line',data:d.np,borderColor:'#1D9E75',backgroundColor:'rgba(29,158,117,0.07)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#1D9E75',tension:.4,fill:true,label:'Net profit',yAxisID:'y'}
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}},scales:{y:{ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}},x:{ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}}}}});
 
   charts['c2']=new Chart(document.getElementById('c2'),{type:'line',data:{labels:M,datasets:[{data:d.mgn,borderColor:'#534AB7',backgroundColor:'rgba(83,74,183,0.07)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#534AB7',tension:.4,fill:true}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw.toFixed(1)+'%'}}},scales:{y:{min:0,max:80,ticks:{callback:v=>v+'%',font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}},x:{ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}}}}});
 
   charts['c3']=new Chart(document.getElementById('c3'),{type:'doughnut',data:{labels:[],datasets:[{data:[],backgroundColor:[],borderWidth:2,borderColor:'var(--color-background-primary)'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}}}});
 
-  mk('c4','bar',M,[
+  charts['c4']=new Chart(document.getElementById('c4'),{type:'bar',data:{labels:M,datasets:[
     {data:d.rfee,backgroundColor:'rgba(55,138,221,0.7)',borderWidth:0,label:'Revenue fee',stack:'s'},
     {data:d.pfee,backgroundColor:'rgba(133,183,235,0.7)',borderWidth:0,label:'Platform fee',stack:'s'}
-  ],{plugins:{legend:{display:false}},scales:{x:{stacked:true,ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}}}});
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}},scales:{x:{stacked:true,ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}}}}});
 
-  mk('c5','bar',M,[
-    {data:[],backgroundColor:'rgba(226,75,74,0.7)',stack:'s',borderWidth:0,label:'Salaires'},
+  charts['c5']=new Chart(document.getElementById('c5'),{type:'bar',data:{labels:M,datasets:[
+    {data:[],backgroundColor:'rgba(226,75,74,0.7)',stack:'s',borderWidth:0,label:'Wages'},
     {data:[],backgroundColor:'rgba(239,159,39,0.7)',stack:'s',borderWidth:0,label:'Bonus'},
     {data:[],backgroundColor:'rgba(55,138,221,0.7)',stack:'s',borderWidth:0,label:'Software'},
-    {data:[],backgroundColor:'rgba(29,158,117,0.7)',stack:'s',borderWidth:0,label:'Link'},
-    {data:[],backgroundColor:'rgba(180,178,169,0.7)',stack:'s',borderWidth:0,label:'Autres'}
-  ],{plugins:{legend:{display:false}},scales:{x:{stacked:true,ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}}}});
+    {data:[],backgroundColor:'rgba(29,158,117,0.7)',stack:'s',borderWidth:0,label:'Linkbuilding'},
+    {data:[],backgroundColor:'rgba(180,178,169,0.7)',stack:'s',borderWidth:0,label:'Other'}
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.raw)}}},scales:{x:{stacked:true,ticks:{font:{size:10},autoSkip:false,maxRotation:0},grid:{display:false}},y:{stacked:true,ticks:{callback:v=>fmt(v),font:{size:10}},grid:{color:'rgba(128,128,128,0.09)'}}}}});
 
   const yrs=['2022','2023','2024','2025','2026*'];
   const trs=[2261943,4042304,5878424,9710039,1395558];
